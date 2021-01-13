@@ -1,0 +1,49 @@
+{% extends "baseTemplate.html" %}
+
+{% block head %} {{ super() }} {% endblock %}
+
+{% block title %} Message Sent {% endblock %}
+
+
+<!-- Header-->
+{% block navbar %} {{ super() }}{% endblock %}
+
+{% block navLogin %}
+    {% if current_user.is_authenticated %}
+        <li class="nav-item"><a class="nav-link text-nowrap" href="{{ url_for('logout') }}">Log Out</a></li>
+    {% else %}
+        {{ super() }}
+    {% endif %}
+{% endblock %}
+
+{% block navSignup %}
+    {% if current_user.is_authenticated %}
+        <li class="nav-item"><a class="nav-link text-nowrap" href="{{ url_for('signup') }}">Welcome <i>{{ current_user.first_name }}</i></a></li>
+    {% else %}
+        {{ super() }}
+    {% endif %}
+{% endblock %}
+
+
+<!--Variable content-->
+
+{% block contents %}
+
+    <div class="card">
+        <div class="card-body">
+            <p>The application for your child, <i>{{ full_name }}</i>, has been sent.<br/>
+                We will get back to you shortly. <br/> Thank you!</p>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+
+
+<!--Footer-->
+{% block foot %}
+    {{ super() }}
+{% endblock %}
+

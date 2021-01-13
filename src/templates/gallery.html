@@ -1,0 +1,77 @@
+{% extends "baseTemplate.html" %}
+
+{% block head %} {{ super() }} {% endblock %}
+
+{% block title %} Gallery {% endblock %}
+
+
+<!-- Header-->
+{% block navbar %} {{ super() }}{% endblock %}
+
+{% block navLogin %}
+    {% if current_user.is_authenticated %}
+        <li class="nav-item"><a class="nav-link text-nowrap" href="{{ url_for('logout') }}">Log Out</a></li>
+    {% else %}
+        {{ super() }}
+    {% endif %}
+{% endblock %}
+
+{% block navSignup %}
+    {% if current_user.is_authenticated %}
+        <li class="nav-item"><a class="nav-link text-nowrap" href="{{ url_for('signup') }}">Welcome <i>{{ current_user.first_name }}</i></a></li>
+    {% else %}
+        {{ super() }}
+    {% endif %}
+{% endblock %}
+
+
+<!--Variable content-->
+
+{% block contents %}
+
+
+    <div class="card">
+        <div class="card-body">
+            <h2 style="padding: 20px 20px"><b>GALLERY</b></h2>
+            <div class="row">
+
+                <div class="column">
+                    <img class="zoom imgGal" src="static/images/IMG_2391.JPG" alt="Play room">
+                    <img class="zoom imgGal" src="static/images/IMG_2394.JPG" alt="Play room">
+                    <img class="zoom imgGal" src="static/images/daycare_3.JPG" alt="Nursery">
+                </div>
+
+                <div class="column">
+                    <img class="zoom imgGal" src="static/images/IMG_2393_b.JPG" alt="Play room">
+                    <img class="zoom imgGal" src="static/images/IMG_2389.JPG" alt="Play room">
+                    <img class="zoom imgGal" src="static/images/IMG_2263.JPG" alt="Play room">
+
+                </div>
+
+                <div class="column">
+                    <img class="zoom imgGal" src="static/images/IMG_2387.JPG" alt="Play table">
+                    <img class="zoom imgGal" src="static/images/IMG_2261.JPG" alt="Play room">
+                    <img class="zoom imgGal" src="static/images/IMG_2260.JPG" alt="Play room">
+                    <img class="zoom imgGal" src="static/images/IMG_2264.JPG" alt="Play room">
+                </div>
+
+                <div class="column">
+                    <img class="zoom imgGal" src="static/images/IMG_2392.JPG" alt="Play room">
+                    <img class="zoom imgGal" src="static/images/IMG_2388.JPG" alt="Dining table">
+                    <img class="zoom imgGal" src="static/images/IMG_2386.JPG" alt="Play room">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+
+<!--Footer-->
+{% block foot %}
+    {{ super() }}
+{% endblock %}
+

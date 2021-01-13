@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>{% block head %}
+    <meta charset="utf-8">
+
+    <title>{% block title %}Base Template{% endblock %}</title>
+
+    <!--Default external imports-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <!--External style sheets-->
+    <!--Fonts-->
+
+    <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet'>
+
+
+    <!--CSS files-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/main.css') }}">
+
+
+    <!--Logo icon-->
+    <link rel="icon" href="{{url_for('static', filename='images/mapleLogo.png')}}">
+
+    <!--Sticky nav bar-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% endblock %}</head>
+
+
+{% block body %}<body>{% endblock %}
+
+<!-- Header-->
+<header>{% block navbar %}
+    <div class="container">
+        <nav class="navbar navbar-expand-xl bg-warning navbar-light fixed-top">
+            <div class="container-fluid">
+
+                <!--Daycare logo-->
+                <a class="navbar-brand py-0" href="{{ url_for('home') }}">
+        <span class="brandLogo">
+          <img src="{{url_for('static', filename='images/mapleLogo.png')}}" alt="Maple Daycare logo" width="30px">
+          Maple Daycare
+        </span>
+                </a>
+
+                <!--Toggle button-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--Navbar items-->
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+                    <!--Left aligned navbar items-->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nowrap" href="{{ url_for('aboutus') }}">About Us</a>
+                        </li>
+                        <li class="nav-item">
+
+                            <div class="dropdown">
+                                <a class="nav-link dropbtn" href="{{ url_for('programs') }}">Programs<i class="fa fa-caret-down"></i></a>
+
+                                <div class="dropdown-content">
+                                    <a href="{{ url_for('programs') }}#infant">Infant</a>
+                                    <a href="{{ url_for('programs') }}#preschool">Preschool</a>
+                                </div>
+                            </div>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('gallery') }}">Gallery</a>
+                        </li>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!--Right aligned navbar items-->
+                    <ul class="navbar-nav ml-auto">
+                        {% block navLogin %}<li class="nav-item"><a class="nav-link text-nowrap" href="{{ url_for('login') }}">Log In</a></li> {% endblock %}
+                        {% block navSignup %}<li class="nav-item"><a class="nav-link text-nowrap" href="{{ url_for('signup') }}">Sign Up</a></li> {% endblock %}
+
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+{% endblock %}</header>
+
+
+
+<!--Variable content-->
+{% block contents %}{% endblock %}
+
+
+
+<!--Footer-->
+<div class="footer">{% block fiiter %}
+    <footer class="footer fixed-bottom bg-warning">
+        <div class="container footer-copyright text-center py-2">&copy 2019 Copyright:
+            <a href="{{ url_for('home') }}"> mapledaycare.com</a>
+        </div>
+    </footer>
+{% endblock %}</div>
+
+
+
+</body>
+</html>
+
+
+

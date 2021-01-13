@@ -1,0 +1,89 @@
+{% extends "baseTemplate.html" %}
+
+{% block head %} {{ super() }} {% endblock %}
+
+{% block title %} Home {% endblock %}
+
+
+<!-- Header-->
+{% block navbar %} {{ super() }}{% endblock %}
+
+{% block navLogin %}
+    {% if current_user.is_authenticated %}
+        <li class="nav-item"><a class="nav-link text-nowrap" href="{{ url_for('logout') }}">Log Out</a></li>
+    {% else %}
+        {{ super() }}
+    {% endif %}
+{% endblock %}
+
+{% block navSignup %}
+    {% if current_user.is_authenticated %}
+        <li class="nav-item"><a class="nav-link text-nowrap" href="{{ url_for('signup') }}">Welcome <i>{{ current_user.first_name }}</i></a></li>
+    {% else %}
+        {{ super() }}
+    {% endif %}
+{% endblock %}
+
+
+<!--Variable content-->
+
+{% block body %}<body onload="javascript:turnOn()">{% endblock %}
+
+{% block contents %}
+    <script src="{{ url_for('static', filename="JS/turn.js")}}"></script>
+
+    <div class="container pBlock">
+
+        <div class="container">
+            <img id="rotate" class="mapleImg col-lg-6 col-md-8 col-sm-12" src="static/images/mapleLogo.png" alt="Welcome">
+            <p class="homeLogo">MAPLE DAYCARE</p>
+        </div>
+
+        <br/>
+
+
+        <div class="borderBlock">
+            <img class="welcomeImg col-lg-6 col-md-8 col-sm-12" src="static/images/welcome.png" alt="Welcome">
+
+            <p>
+                Paragraph explaining the main goal of the daycare and why a parent should choose Maple.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis
+                dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis
+                in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc
+                venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor
+                porta. Cras ac leo purus. Mauris quis diam velit.</p>
+
+        </div>
+
+
+        <div class="row" style="padding-top: 20px; padding-bottom: 20px">
+
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12" style="padding: 0 23px;">
+                <div class="column2" style="background-color: peachpuff;">
+                    <p><b><br/>Open from 6:30 am to 6:00 pm Monday through Friday<br/><br/>
+                        514-123-4567<br/><br/>
+                        mapledaycare@gmail.com<br/><br/>
+                        1234 Main Street, Townsville<br/><br/>
+                        <a style="font-size: 15px;" href="{{ url_for('contact') }}">Click here to register a child!</a></b></p>
+                </div>
+            </div>
+
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12" style="padding: 0;">
+                <div class="column2" style="padding: 0 23px;">
+                    <a href="{{ url_for('gallery') }}"><img class="linkGal" src="static/images/IMG_2391.JPG"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+
+
+<!--Footer-->
+{% block foot %}
+    {{ super() }}
+{% endblock %}
+
