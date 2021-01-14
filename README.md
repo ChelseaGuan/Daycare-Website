@@ -22,7 +22,7 @@ The user enters a last name, but their password is too short. Upon entering a lo
 ![Registration Password Warning](https://media.giphy.com/media/6Hpbhr6jh6F3pC8Z7R/giphy.gif)  
   
 The user's information is stored in a CSV file called "accounts.csv", where a salt is added to the password and the result is hashed.  
-![Account Information](https://github.com/ChelseaGuan/Daycare-Website/AccountInfo.png?raw=true)  
+![Account Information](images/AccountInfo.png)  
   
 Demo Part 8: Successful user login  
 ![Login](https://media.giphy.com/media/5dxzKc9FoXjhA8bmCy/giphy.gif)  
