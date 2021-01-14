@@ -8,7 +8,7 @@ Demo Part 2: Programs page
 ![Programs](https://media.giphy.com/media/E89jc7N4rpCbVA44zk/giphy.gif)  
   
 Demo Part 3: Gallery page  
-![Gallery](https://media.giphy.com/media/7i96wO1y9C7kOVTslM/giphy.gif)  
+![Gallery](images/Gallery.GIF)  
   
 Demo Part 4: To contact the daycare owner, the user must first login to their account  
 ![NewUser](https://media.giphy.com/media/zeJbJQdGB7KV5RoHoU/giphy.gif)  
@@ -22,7 +22,7 @@ The user enters a last name, but their password is too short. Upon entering a lo
 ![Registration Password Warning](https://media.giphy.com/media/6Hpbhr6jh6F3pC8Z7R/giphy.gif)  
   
 The user's information is stored in a CSV file called "accounts.csv", where a salt is added to the password and the result is hashed.  
-![Account Information](images/AccountInfo.png)  
+![Account Information](images/AccountInfo.PNG)  
   
 Demo Part 8: Successful user login  
 ![Login](https://media.giphy.com/media/5dxzKc9FoXjhA8bmCy/giphy.gif)  
