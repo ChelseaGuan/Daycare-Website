@@ -3,21 +3,24 @@
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
-  <ol>
+  <ul>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
+      <ol>
         <li><a href="#built-with">Built With</a></li>
         <li><a href="#features">Features</a></li>
-      </ul>
+      </ol>
     </li>
     <li>
       <a href="#demonstration">Demonstration</a>
-       <ul>
-        <li><a href="#demo-part-1-:-home-page-and-about-us-pagewith">Home and About Us</a></li>
-      </ul>
+       <ol>
+        <li><a href="#demo-part-1-home-page-and-about-us-page">Home and About Us</a></li>
+         <li><a href="#demo-part-2-programs-page">Programs</a></li>
+         <li><a href="#demo-part-3-gallery-page">Gallery</a></li>
+         <li><a href="#demo-part-4-home-page-and-about-us-page">Home and About Us</a></li>
+      </ol>
     </li>
-  </ol>
+  </ul>
 </details>  
   
 ## About the Project  
@@ -36,7 +39,7 @@ Responsive website with template inheritance, error handling and form validation
   
 ## Demonstration  
   
-### Demo Part 1: Home page and About Us page  
+### Demo Part 1: Home page and About Us page
 ![Home + About Us](images/Home+AboutUs.gif)  
   
 ### Demo Part 2: Programs page  
