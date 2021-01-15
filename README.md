@@ -1,6 +1,41 @@
-# Daycare-Website
-Responsive website with template inheritance, error handling and form validation, built using Python (Flask), JavaScript, CSS (Bootstrap) and HTML. Presence of a CSV file to store customer data and allow for user registration, login and logout.
+# Daycare-Website  
 
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#features">Features</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#demonstration">Demonstration</a>
+       <ul>
+        <li><a href="#demo-part-1-:-home-page-and-about-us-pagewith">Home and About Us</a></li>
+      </ul>
+    </li>
+  </ol>
+</details>  
+  
+## About the Project  
+Responsive website with template inheritance, error handling and form validation.  
+### Built With  
+* Python (Flask)
+* CSS (Bootstrap)
+* JavaScript
+* HTML
+### Features
+* Template inheritance
+* Flask Form validation with WTForms 
+* JavaScript input and form validation using regular expressions
+* Tables and lists created dynamically from data stored in a local CSV file
+* CSV file to store customer data and allow for user registration, login and logout.
+  
+## Demonstration  
+  
 ### Demo Part 1: Home page and About Us page  
 ![Home + About Us](images/Home+AboutUs.gif)  
   
