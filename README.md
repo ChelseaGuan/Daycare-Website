@@ -8,6 +8,7 @@
     <li>
       <a href="#about-the-project">About the Project</a>
       <ol>
+        <li><a href="development">Development</a></li>
         <li><a href="#built-with">Built With</a></li>
         <li><a href="#features">Features</a></li>
       </ol>
@@ -28,7 +29,11 @@
 </details>  
   
 ## About the Project  
-Responsive website with template inheritance, error handling and form validation.  
+Responsive website with template inheritance, error handling and form validation. 
+  
+### Development
+This project was developed in the PyCharm IDE from JetBrains.
+  
 ### Built With  
 * Python (Flask)
 * CSS (Bootstrap)
