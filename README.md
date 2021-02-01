@@ -8,7 +8,7 @@
     <li>
       <a href="#about-the-project">About the Project</a>
       <ol>
-        <li><a href="development">Development</a></li>
+        <li><a href="#development">Development</a></li>
         <li><a href="#built-with">Built With</a></li>
         <li><a href="#features">Features</a></li>
       </ol>
@@ -38,7 +38,8 @@ This project was developed in the PyCharm IDE from JetBrains.
 * Python (Flask)
 * CSS (Bootstrap)
 * JavaScript
-* HTML
+* HTML  
+
 ### Features
 * Template inheritance
 * Flask Form validation with WTForms 
