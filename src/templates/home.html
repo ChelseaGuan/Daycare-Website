@@ -27,7 +27,7 @@
 
 <!--Variable content-->
 
-{% block body %}<body onload="javascript:turnOn()">{% endblock %}
+{% block body %}<body onload="turnOn()">{% endblock %}
 
 {% block contents %}
     <script src="{{ url_for('static', filename="JS/turn.js")}}"></script>
